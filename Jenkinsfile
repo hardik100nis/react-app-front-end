@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/hardik100nis/YOUR_REPO.git'
+                git 'https://github.com/hardik100nis/react-app-front-end.git'
             }
         }
 
