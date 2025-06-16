@@ -1,0 +1,559 @@
+.waifunomics {
+  position: relative;
+  padding-bottom: 18rem;
+  font-family: "Wendy One";
+
+  @media (max-width: 1440px) {
+    padding-bottom: 16rem;
+  }
+  @media (max-width: 1200px) {
+    padding-bottom: 12rem;
+  }
+  @media (max-width: 991px) {
+    padding-bottom: 9rem;
+  }
+  @media (max-width: 768px) {
+    padding-bottom: 5rem;
+  }
+  img.coin {
+    position: absolute;
+    left: 2%;
+    width: 15rem;
+
+    @media (max-width: 1440px) {
+      width: 12rem;
+      left: -4%;
+    }
+    @media (max-width: 768px) {
+      width: 8rem;
+    }
+    @media (max-width: 576px) {
+      width: 5rem;
+    }
+    @media (max-width: 450px) {
+      width: 3rem;
+    }
+  }
+  h2 {
+    padding-top: 3rem;
+    text-align: center;
+    font-size: 8rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 3rem;
+
+    @media (max-width: 1200px) {
+      font-size: 5rem;
+    }
+    @media (max-width: 991px) {
+      font-size: 4rem;
+    }
+    @media (max-width: 768px) {
+      font-size: 2.7rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 2.2rem;
+    }
+    @media (max-width: 450px) {
+      font-size: 1.6rem;
+    }
+
+    span {
+      color: #f7a9c1;
+    }
+  }
+  .tabs-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    .tabs {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      button {
+        background-color: transparent;
+        border: none;
+        font-family: "Kalam";
+        border-bottom: 2px solid white;
+        color: white;
+        text-align: left;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        padding-left: 2rem;
+        text-transform: uppercase;
+        &:last-child {
+          border-bottom: none;
+        }
+        &.active {
+          background-color: #bf5562;
+        }
+        &:hover {
+          background-color: #cdcdcd;
+          color: black;
+        }
+        @media (max-width: 991px) {
+          font-size: 1.6rem;
+        }
+        @media (max-width: 768px) {
+          font-size: 1.3rem;
+        }
+        @media (max-width: 576px) {
+          padding-left: 1rem;
+          font-size: 1rem;
+        }
+      }
+    }
+    img.teacher {
+      width: 380px;
+      @media (max-width: 991px) {
+        width: 240px;
+      }
+      @media (max-width: 576px) {
+        width: 160px;
+      }
+      @media (max-width: 450px) {
+        width: 110px;
+      }
+    }
+  }
+
+  .token-info-table {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    border-collapse: collapse;
+    font-family: "Kalam";
+    th {
+      background-color: #87a1d6;
+    }
+    th, td {
+      border-bottom: 1px dashed #ddd;
+      padding: 8px;
+    }
+    tr:last-child {
+      th, td {
+        border: none;
+      }
+    }
+    @media (max-width: 991px) {
+      font-size: 1.6rem;
+    }
+    @media (max-width: 768px) {
+      font-size: 1.3rem;
+    }
+    @media (max-width: 576px) {
+      padding-left: 1rem;
+      font-size: 1rem;
+    }
+  }
+  img.coins-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25rem;
+    @media (max-width: 1200px) {
+      width: 20rem;
+    }
+    @media (max-width: 991px) {
+      width: 16rem;
+    }
+    @media (max-width: 768px) {
+      width: 12rem;
+    }
+    @media (max-width: 576px) {
+      width: 8rem;
+    }
+  }
+
+  .supply-distribution {
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: underline;
+      margin-bottom: 7rem;
+      font-family: Kalam;
+      font-size: 3rem;
+      @media (max-width: 991px) {
+        font-size: 2rem;
+      }
+      @media (max-width: 768px) {
+        font-size: 1.6rem;
+      }
+      @media (max-width: 768px) {
+        font-size: 1.2rem;
+        margin-bottom: 4rem;
+      }
+    }
+    h6 {
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 2rem;
+      font-family: Kalam;
+      font-size: 2.5rem;
+      @media (max-width: 991px) {
+        font-size: 1.65rem;
+      }
+      @media (max-width: 768px) {
+        font-size: 1.35rem;
+      }
+      @media (max-width: 768px) {
+        font-size: 1rem;
+        margin-bottom: 4rem;
+      }
+    }
+    .chart-container {
+      position: relative;
+      width: 40%;
+      margin: auto;
+      @media (max-width: 1400px) {
+        width: 50%;
+      }
+      @media (max-width: 991px) {
+        width: 60%;
+      }
+      @media (max-width: 480px) {
+        width: 100%;
+      }
+
+      .chart-comp-container {
+        position: absolute;
+        text-transform: uppercase;
+        font-family: Kalam;
+        .info {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          font-size: 1.8rem;
+          justify-content: center;
+          align-items: center;
+          p {
+            margin: 0;
+          }
+        }
+        &.team {
+          left: -60%;
+          top: 5%;
+        }
+        .team-comp {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 300px;
+          .locked {
+            position: absolute;
+            top: 50%;
+            font-size: 1.3rem;
+            line-height: 2.2rem;
+            width: 12rem;
+            text-align: right;
+            rotate: -10deg;
+            color: #F30076;
+            font-family: Kalam;
+          }
+          .info {
+            position: absolute;
+            right: 0;
+          }
+
+          img#deco {
+            position: absolute;
+            left: 65%;
+            width: 4rem;
+            transform: scaleX(-1);
+          }
+          img.line {
+            position: absolute;
+            left: 105%;
+            top: 50%;
+          }
+        }
+        &.presale {
+          left: 110%;
+          top: 10%;
+        }
+        .presale-comps {
+          position: relative;
+          img.line {
+            position: absolute;
+            left: -145%;
+            top: 50%;
+          }
+        }
+        &.lp {
+          left: 95%;
+          top: 85%;
+        }
+        .lp-comps {
+          position: relative;
+          img.line {
+            position: absolute;
+            width: 9rem;
+            left: -300%;
+            top: 0%;
+          }
+        }
+        &.staking {
+          left: -15%;
+          top: 95%;
+        }
+        .staking-comp {
+          position: relative;
+          img.line {
+            position: absolute;
+            left: 55%;
+            top: -100%;
+          }
+        }
+        &.marketing {
+          left: -35%;
+          top: 55%;
+        }
+        .marketing-comp {
+          position: relative;
+          img.line {
+            position: absolute;
+            left: 105%;
+            top: 15%;
+          }
+        }
+      }
+      @media (max-width: 1199px) {
+        .chart-comp-container {
+          .info {
+            font-size: 1.4rem;
+          }
+          &.team {
+            left: -38%;
+          }
+          .team-comp {
+            width: 200px;
+            .locked {
+              font-size: 1.1rem;
+              line-height: 1.6rem;
+              width: 8rem;
+            }
+            img#deco {
+              width: 3rem;
+            }
+            img.line {
+              width: 6rem;
+            }
+          }
+          &.presale {
+            left: 100%;
+            top: 15%;
+          }
+          .presale-comps {
+            img.line {
+              width: 5rem;
+              left: -115%;
+            }
+          }
+          &.staking {
+            left: -10%;
+            top: 95%;
+          }
+          .staking-comp {
+            img.line {
+              width: 5rem;
+            }
+          }
+          &.lp {
+            left: 90%;
+          }
+          .lp-comps {
+            img.line {
+              width: 6rem;
+              left: -250%;
+            }
+          }
+        }
+      }
+      @media (max-width: 767px) {
+        .chart-comp-container {
+          .info {
+            font-size: 1rem;
+          }
+          &.team {
+            left: -40%;
+            top: 10%;
+          }
+          .team-comp {
+            width: 150px;
+            .locked {
+              font-size: 0.8rem;
+              line-height: 1rem;
+              width: 6rem;
+            }
+            img#deco {
+              width: 2rem;
+            }
+            img.line {
+              width: 4rem;
+            }
+          }
+          &.presale {
+            left: 105%;
+          }
+          .presale-comps {
+            img.line {
+              width: 4rem;
+              left: -115%;
+            }
+          }
+          .lp-comps {
+            img.line {
+              width: 4rem;
+            }
+          }
+          .staking-comp {
+            img.line {
+              width: 3rem;
+            }
+          }
+          .marketing-comp {
+            img.line {
+              width: 4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .tax-structure {
+    text-align: center;
+    font-family: 'Kalam';
+    img {
+      position: absolute;
+    }
+    span {
+      color: #F7A9C1;
+    }
+    table {
+      th {
+        background-image: url(../assets/images/deco1.png);
+        text-transform: uppercase;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+        font-size: 5rem;
+        width: 20%;
+        position: relative;
+        min-width: 100%;
+        img {
+          width:  12rem;
+          top: 0;
+          right: 0;
+        }
+        @media (max-width: 1200px) {
+          font-size: 3rem;
+        }
+        @media (max-width: 768px) {
+          font-size: 2rem;
+        }
+        @media (max-width: 450px) {
+          font-size: 1.2rem;
+        }
+      }
+      td {
+        font-size: 2.2rem;
+        div {
+          position: relative;
+          padding: 2rem 0;
+          width: fit-content;
+          margin: auto;
+          img {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+          }
+          @media (max-width: 1200px) {
+            font-size: 1.6rem;
+          }
+          @media (max-width: 768px) {
+            font-size: 1.2rem;
+            padding: 1.5rem 0;
+          }
+          @media (max-width: 450px) {
+            font-size: 1rem;
+            padding: 1rem 0;
+          }
+        }
+        &.note {text-align: left; color: #F7A9C1; padding: 2rem 0; 
+          @media (max-width: 1200px) {
+            font-size: 1.6rem;
+          }
+          @media (max-width: 768px) {
+            font-size: 1.2rem;
+            padding: 1.5rem 0;
+          }
+          @media (max-width: 450px) {
+            font-size: 1rem;
+            padding: 1rem 0;
+          }}
+      }
+    }
+  }
+
+  .anti-whales {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img#whale {
+      width: 30%;
+    }
+
+    .contents {
+      font-family: 'Kalam';
+      .paragraph {
+        font-size: 2.5rem;
+        span {
+          color: #F7A9C1;
+        }
+        .text {
+          margin-bottom: 0;
+        }
+        @media (max-width: 1400px) {
+          font-size: 2rem;
+        }
+        @media (max-width: 1200px) {
+          font-size: 1.6rem;
+        }
+        @media (max-width: 768px) {
+          font-size: 1.2rem;
+        }
+        @media (max-width: 450px) {
+          font-size: 1rem;
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .anti-whales-note {
+    text-align: -webkit-center;
+    font-family: 'Kalam';
+    margin-top: 3rem;
+    color: #F7A9C1;
+    font-size: 2.5rem;
+    @media (max-width: 1400px) {
+      font-size: 2rem;
+    }
+    @media (max-width: 1200px) {
+      font-size: 1.6rem;
+    }
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+    @media (max-width: 450px) {
+      font-size: 1rem;
+    }
+  }
+}

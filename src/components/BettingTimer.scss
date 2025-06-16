@@ -1,0 +1,391 @@
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  @media (max-width: 576px) {
+    gap: 0.5rem;
+  }
+  .end {
+    background-color: #97363f;
+  }
+  .mid {
+    background-color: #bf5562;
+  }
+  .center {
+    background-color: #ffb8d3;
+  }
+  .number-container {
+    padding: 0.5rem 1rem;
+    font-family: "Wendy One";
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem;
+
+    @media (max-width: 768px) {
+      font-size: 3rem;
+      padding: 1rem;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 2rem;
+      padding: 1rem;
+    }
+  }
+  .unit {
+    font-family: "Wendy One";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem;
+    margin-top: 1rem;
+    @media (max-width: 768px) {
+      margin-top: 2.5rem;
+      font-size: 1.6rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 1.2rem;
+    }
+  }
+  span:first-child {
+    margin-right: 0.5rem;
+
+    @media (max-width: 576px) {
+      margin-right: 0.2rem;
+    }
+  }
+}
+
+@font-face {
+  font-family: 'TheBoldFont';
+  src: url('../assets/fonts/THEBOLDFONT-FREEVERSION.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.betting-timer {
+  margin: 1.5rem 0;
+  
+  .timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    
+    .time-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      .time-digits {
+        display: flex;
+        gap: 0.25rem;
+        
+        .digit {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 3.5rem;
+          height: 4.5rem;
+          background: rgba(30, 30, 47, 0.8);
+          border: 2px solid rgba(54, 202, 186, 0.3);
+          border-radius: 8px;
+          box-shadow: 
+            0 4px 10px rgba(0, 0, 0, 0.2),
+            inset 0 1px 1px rgba(255, 255, 255, 0.1);
+          font-family: 'TheBoldFont', 'Wendy One', sans-serif;
+          font-size: 2.5rem;
+          color: #36caba;
+          text-shadow: 0 0 10px rgba(54, 202, 186, 0.5);
+          position: relative;
+          overflow: hidden;
+          
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+          }
+          
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.3), transparent);
+          }
+          
+          @media (max-width: 768px) {
+            width: 2.8rem;
+            height: 3.5rem;
+            font-size: 2rem;
+          }
+          
+          @media (max-width: 576px) {
+            width: 2.2rem;
+            height: 3rem;
+            font-size: 1.8rem;
+          }
+        }
+      }
+      
+      .time-label {
+        margin-top: 0.75rem;
+        font-family: 'TheBoldFont', 'Wendy One', sans-serif;
+        font-size: 1rem;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        
+        @media (max-width: 576px) {
+          font-size: 0.8rem;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+    
+    .time-separator {
+      font-family: 'TheBoldFont', 'Wendy One', sans-serif;
+      font-size: 2.5rem;
+      color: #36caba;
+      margin: 0 0.25rem;
+      padding-bottom: 2.5rem;
+      animation: pulse 1s infinite;
+      
+      @media (max-width: 768px) {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+      }
+      
+      @media (max-width: 576px) {
+        font-size: 1.8rem;
+        padding-bottom: 1.8rem;
+      }
+    }
+  }
+  
+  .timer-progress {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        linear-gradient(90deg, 
+          transparent 0%, 
+          rgba(255, 255, 255, 0.1) 50%, 
+          transparent 100%);
+      background-size: 200% 100%;
+      animation: shimmer 2s infinite linear;
+    }
+    
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #36caba, #36caba);
+      border-radius: 2px;
+      transition: width 1s linear;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 5px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.7);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 10px rgba(54, 202, 186, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(54, 202, 186, 0.4); }
+  100% { box-shadow: 0 0 10px rgba(54, 202, 186, 0.2); }
+}
+
+@keyframes flip {
+  0% { transform: rotateX(0); }
+  100% { transform: rotateX(360deg); }
+}
+
+@keyframes shine {
+  0% { background-position: -100% 0; }
+  100% { background-position: 100% 0; }
+}
+
+.modern-timer {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  padding: 4px;
+  border-radius: 12px;
+
+  .time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    .time-value {
+      background: rgba(20, 25, 45, 0.95);
+      border: 2px solid rgba(54, 202, 186, 0.3);
+      border-radius: 12px;
+      width: 85px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #36CABA;
+      font-family: 'TheBoldFont', monospace;
+      text-shadow: 0 0 10px rgba(54, 202, 186, 0.5);
+      position: relative;
+      animation: glow 2s infinite;
+      
+      // Horizontal line through middle
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: 1px;
+        background: linear-gradient(90deg, 
+          transparent,
+          rgba(54, 202, 186, 0.3),
+          rgba(54, 202, 186, 0.5),
+          rgba(54, 202, 186, 0.3),
+          transparent
+        );
+      }
+
+      // Top shine
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 5px;
+        right: 5px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    .time-label {
+      font-size: 14px;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 500;
+      min-width: 85px;
+      text-align: center;
+    }
+
+    &:not(:last-child) {
+      position: relative;
+      
+      &::after {
+        content: ':';
+        position: absolute;
+        right: -12px;
+        top: 25px;
+        color: #36CABA;
+        font-size: 32px;
+        font-weight: bold;
+        animation: pulse 1.5s infinite;
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .modern-timer {
+    gap: 10px;
+
+    .time-unit {
+      gap: 6px;
+
+      .time-value {
+        width: 65px;
+        height: 60px;
+        font-size: 28px;
+      }
+
+      .time-label {
+        font-size: 12px;
+        min-width: 65px;
+      }
+
+      &:not(:last-child)::after {
+        right: -10px;
+        top: 20px;
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .modern-timer {
+    gap: 8px;
+
+    .time-unit {
+      gap: 4px;
+
+      .time-value {
+        width: 55px;
+        height: 50px;
+        font-size: 24px;
+      }
+
+      .time-label {
+        font-size: 10px;
+        min-width: 55px;
+      }
+
+      &:not(:last-child)::after {
+        right: -8px;
+        top: 15px;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

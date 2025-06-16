@@ -1,0 +1,46 @@
+.round-button {
+  border-radius: 99px;
+  border: 1px solid #8b7978;
+  text-transform: uppercase;
+  padding: 0.8rem 0.8rem;
+  font-weight: bold;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: white;
+  &.danger {
+    background-color: #9f2c3c;
+    &:hover {
+      background-color:rgb(159 44 60/0.5);
+    }
+  }
+  &.primary {
+    background-color: #5e9ab1;
+    &:hover {
+      background-color: #44b9e7;
+    }
+  }
+  &.warning {
+    background-color: #796703;
+    &:hover {
+      background-color: #bda107;
+    }
+  }
+  &.success {
+    background-color: #037909;
+    &:hover {
+      background-color: #07b310;
+    }
+  }
+  &.transparent {
+    background-color: transparent;
+  }
+  &.disabled, &[disabled], &:disabled {
+    background-color: #767676;
+    &:hover {
+      background-color: #525252;
+    }
+  }
+  &:disabled {
+    background-color: #767676;
+    opacity: 1;
+  }
+}

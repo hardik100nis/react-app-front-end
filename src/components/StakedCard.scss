@@ -1,0 +1,33 @@
+.staked-card {
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  border: 1px solid var(--secondary);
+  border-radius: 1rem;
+  text-align: left;
+
+  .img-container {
+    width: 100%;
+  }
+
+  .loh-checkbox {
+    input + label {
+      width: 21px;
+      height: 20px;
+    }
+    position: absolute;
+    bottom: 0.5rem;
+    right: 1rem;
+  }
+
+  .auto-restake-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 20px;
+    padding: 0;
+  }
+}

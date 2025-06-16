@@ -1,0 +1,70 @@
+.staking-card {
+  position: relative;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #585858;
+  border-radius: 1rem;
+  text-align: left;
+  margin-bottom: 1rem;
+  font-family: 'mont';
+  overflow: hidden;
+  &:hover {
+    .card-body {
+      opacity: 1;
+    }
+  }
+  .card-header {
+    background-color: #111111;
+    text-align: center;
+    padding: 1.2rem;
+  }
+  .card-body {
+    opacity: 0.5;
+    &.opacity-1 {
+      opacity: 1;
+    }
+    .img-container {
+      max-width: 100%;
+    }
+  }
+  .card-footer {
+    cursor: pointer;
+    .loh-checkbox {
+      width: 100%;
+      height: 50px;
+    	position: relative;
+      label {
+        cursor: pointer;
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        top: 0;
+          left: 0;
+        background: rgb(17 17 17);
+      }
+      label:after {
+        opacity: 0.1;
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 15px;
+        background: transparent;
+        top: 10px;
+        left: calc(50% - 12px);
+        border: 5px solid white;
+        border-top: none;
+        border-right: none;
+        transform: rotate(-45deg);
+      }
+      label:hover::after {
+        opacity: 0.6;
+      }
+      input[type=checkbox]:checked + label:after {
+        border: 5px solid rgb(9 227 20);
+        border-top: none;
+        border-right: none;
+        opacity: 1;
+      }
+    }
+  }
+}

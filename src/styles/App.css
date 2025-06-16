@@ -1,0 +1,471 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  /* background: linear-gradient(to bottom, #0b1c2d, #1e3a5c); */
+  color: #fff;
+  /* width: 100vw; */
+  /* height: 100vh; */
+  background-image: url("../assets/images/image.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+      overflow-x: hidden;
+}
+.app {
+  padding: 20px;
+background-image: linear-gradient(
+    to top,
+    /* bottom solid  */    rgba(18,18,18,1)   0%,
+    /* fade into mid */    rgba(18,18,18,0.7) 10%,
+    /* keep mostly clear */rgba(18,18,18,0)   50%,
+    /* fade up again */    rgba(18,18,18,0.7) 90%,
+    /* full solid top */   rgba(18,18,18,1)   100%
+  );
+    display: flex
+;
+    flex-direction: column;
+
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar h1 {
+  font-size: 28px;
+  margin: 0;
+}
+.highlight {
+  color: #f4c542;
+}
+.navbar nav {
+  display: flex;
+  align-items: center;
+}
+.navbar nav a {
+  margin: 0 10px;
+  color: #ccc;
+  text-decoration: none;
+}
+.connect-btn {
+  /* Size & typography */
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #78350F;           /* matches your SVG text fill */
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  
+  /* Gradient background from paint0_linear */
+  background-image: linear-gradient(
+    90deg,
+    #FFD465 0%,
+    #F8A528 100%
+  );
+  
+  /* Rounded corners matching rx="4.10446" */
+  border: none;
+  border-radius: 4px;
+  
+  /* Outer drop‑shadows approximating the SVG filter */
+  box-shadow:
+    /* first drop shadow: offset-y ~1.37px, color ~rgba(120,53,15,0.5) */
+    0 1.4px 0 rgba(120, 53, 15, 0.5),
+    /* second outer shadow: spread from feMorphology + offset */
+    0 0 8px rgba(120, 53, 15, 0.05),
+    /* inner shadow from effect3_innerShadow */
+    inset 0 1.4px 0 rgba(255, 255, 255, 0.4);
+  
+  /* ensure the shadows don’t get clipped */
+  overflow: visible;
+}
+
+.dashboard {
+  display: flex;
+  /* justify-content: space-between; */
+    justify-content: space-evenly;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.resources,
+.acquire {
+    /* background-color: rgba(255, 255, 255, 0.05); */
+      width: 650px !important;
+    height: 650px !important;
+    opacity: 0.8;
+  background-color: rgba(38, 38, 38, 0.8);
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+      padding: 50px !important;
+}
+
+
+.resources .box p,
+.resources .stats p,
+.claim-box p {
+  margin: 10px 0;
+}
+.stats span,
+.claim-box span {
+  color: gold;
+  font-weight: bold;
+}
+.claim-box {
+  margin-top: 20px;
+  background-color: #222;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+.claim-box button {
+  margin-top: 10px;
+  background-color: orange;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.img-container img {
+  width: 350px;
+}
+/* .buy-btn {
+  background-color: orange;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+.footer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 14px;
+  
+}
+
+.centered-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.centered-header .title {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.centered-header .highlight {
+  color: #f4c542;
+}
+
+.centered-header .nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.centered-header .nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.centered-header .connect-btn {
+  background-color: orange;
+  color: #000;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.top-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(    to right,    rgba(111, 185, 239, 0) 18%,    #7DC2F9 65%,    rgba(111, 185, 239, 0) 60%
+  ); 
+  /* background: linear-gradient(
+    to right,
+    rgba(125, 194, 249, 0) 0%,
+    #7DC2F9 52%,
+    rgba(125, 194, 249, 0) 100%
+  ); */
+  position: absolute;  /* or fixed */
+  top: 1px;
+  left: 0;
+  z-index: 1000;
+}
+
+.social-cards-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 15px; /* Space between each card/button */
+    padding: 20px;
+}
+
+.profile-card-wrapper {
+    /* Just for centering the card if it's the only element on the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: inherit;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+   background-color: rgba(45, 55, 72, 0.6);
+padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    width: 250px;
+    box-sizing: border-box;
+}
+
+.profile-icon {
+    width: 48px; /* Diameter of the circle */
+    height: 48px; /* Diameter of the circle */
+    border-radius: 50%; /* Makes it a perfect circle */
+    background-color: #1da1f2; /* Twitter blue color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px; /* Space between icon and text */
+}
+
+.profile-icon .fab.fa-twitter {
+    color: white; /* White icon color */
+    font-size: 24px; /* Size of the Twitter bird icon */
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-name {
+    font-size: 1.1em; /* Slightly larger for the name */
+    font-weight: 600; /* Bolder for emphasis */
+    color: #cbd5e0; /* Slightly lighter text for the name */
+    margin-bottom: 2px; /* Small space below the name */
+}
+
+.profile-handle {
+    font-size: 0.9em; /* Smaller for the handle */
+    color: #a0aec0; /* Lighter gray for the handle */
+}
+
+
+/* Section Styling */
+.acquire {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    gap: 40px;
+}
+
+.acquire-text {
+  font-size: 2.5em; /* This size applies to both lines */
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Image Container Styling */
+
+/* Buy Button Styling */
+.buy-btn {
+    background: linear-gradient(to bottom, #ffdb58, #ffa500); /* Orange/Gold gradient */
+    color: #212121; /* Dark text for the button */
+    border: none;
+    border-radius: 4px;
+    padding: 15px 170px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Button shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+    letter-spacing: 0.05em; /* A bit of letter spacing */
+    text-transform: uppercase; /* Uppercase text */
+    COLOR: darkred;
+}
+
+.buy-btn:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+}
+
+.buy-btn:active {
+    transform: translateY(0); /* Press down effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+ .dashboard-container {
+            background-color: #242424; /* Slightly lighter dark for the container */
+            /* border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid #333; */
+        }
+        .section-title {
+            color: #EF9520;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        /* Styles for the resource boxes container */
+        .resources-grid {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -5px; /* Compensate for child padding */
+            margin-right: -5px; /* Compensate for child padding */
+            margin-bottom: 20px; /* Equivalent to mb-5 */
+        }
+        .resource-box {
+            background-color: black;
+            color: white; /* Amber color for values */
+            padding: 12px 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 700;
+            flex: 1;
+            margin: 5px; /* Equivalent to px-1 and combined margin */
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+            border: 1px solid #EF9520;
+            width: calc(50% - 10px); /* Equivalent to w-1/2 minus margin */
+            box-sizing: border-box; /* Include padding and border in width */
+            margin-bottom: 8px; /* Equivalent to mb-2 for vertical spacing */
+        }
+        /* Adjust last row margin for resource boxes */
+        .resources-grid .resource-box:nth-last-child(-n + 2) {
+            margin-bottom: 0; /* Remove bottom margin for the last row */
+        }
+
+        .statistic-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px; /* Added padding to separate text from border */
+            border-bottom: 1px #EF9520 solid; /* Added border */
+        }
+        /* Equivalent to space-y-4 for statistic rows */
+        .statistics-section .statistic-row:not(:last-child) {
+            margin-bottom: 1rem; /* 16px */
+        }
+
+        .statistic-label {
+            color: #fff;
+            font-size: 1rem;
+        }
+        .statistic-value {
+            color: #FFD100; /* Amber color for values */
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        .claim-section {
+            background-color: #000;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 45px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+            border: 1px solid #444;
+        }
+        .claim-text {
+            color: #e0e0e0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .claim-button {
+            background: linear-gradient(180deg, #FFD700, #FFA500); /* Gold to Orange gradient */
+            color: #333;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 10px rgba(255, 165, 0, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .claim-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(255, 165, 0, 0.6);
+        }
+        .meaning-dashboard-section {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+            border: 1px solid #444;
+        }
+        .meaning-dashboard-content {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        /* Margins for section titles */
+        .section-title.mt-8 {
+            margin-top: 2rem; /* Equivalent to mt-8 */
+        }
+
+        .bottom-right-svg {
+            position: absolute; /* Changed from fixed to absolute */
+            bottom: 25px;
+            right: 25px;
+            width: 150px;
+            height: 150px;
+            z-index: 10;
+            /* opacity: 0.5; */
+            pointer-events: none; /* Allows clicking through the SVG */
+        }
+
+        .profile-card-image{
+        background-image: url("../assets/Group-1000007323.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        }
+
+.footer-mascot {
+    position: absolute;
+    top: 795px;
+    right: -4rem;
+    width: 462px;
+    height: auto;
+    pointer-events: none;
+}
+.nav a:hover {
+    background-color: #6b6e76;
+    border-radius: 15px;
+    border-color: #E0E0DF;
+    padding: 4px 17px 2px 17px;
+    text-align: center;
+}
+.profile-handle a{
+    color: #a0aec0; /* Lighter gray for the handle */
+    text-decoration: none; /* Remove underline */
+}

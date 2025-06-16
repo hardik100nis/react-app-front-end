@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "process": ["node_modules/process/browser"]
+    }
+  },
+  "include": ["src"]
+}
