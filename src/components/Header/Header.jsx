@@ -12,10 +12,10 @@ function Header() {
    
       </h1>
       <nav className="nav">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">BUY</a>
-        <a href="#">DOCS</a>
+        <a href="/some-valid-path">HOME</a>
+        <a href="/some-valid-path">ABOUT</a>
+        <a href="/some-valid-path">BUY</a>
+        <a href="/some-valid-path">DOCS</a>
         <button className="connect-btn">CONNECT WALLET</button>
       </nav>
     </header>

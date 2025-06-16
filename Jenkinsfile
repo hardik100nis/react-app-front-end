@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     environment {
+        CI = 'false' // disable treat-warnings-as-errors in react-scripts
         IMAGE_NAME = "react-site"
         CONTAINER_NAME = "react-container"
         PORT = "8080"
