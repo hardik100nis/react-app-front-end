@@ -15,11 +15,12 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                bat 'npm install'
-            }
-        }
+stage('Install Dependencies') {
+    steps {
+        bat 'npm install --legacy-peer-deps'
+    }
+}
+
 
         stage('Build React App') {
             steps {
