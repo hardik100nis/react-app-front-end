@@ -39,8 +39,10 @@ stage('Install Dependencies') {
         stage('Run Docker Container') {
             steps {
                 bat '''
-                    docker rm -f $CONTAINER_NAME || true
-                    docker run -d --name $CONTAINER_NAME -p $PORT:80 $IMAGE_NAME
+                    bat 'docker rm -f %CONTAINER_NAME% || exit 0'
+
+                    bat 'docker run -d --name %CONTAINER_NAME% -p %PORT%:80 %IMAGE_NAME%'
+
                 '''
             }
         }
